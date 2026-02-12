@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+const array = []
+//toppings = []
+</script>
 
 <template>
   <h1>You did it!</h1>
@@ -16,11 +19,3 @@
 
   </div>
 </template>
-
-<script setup>
-
-</script>
-
-<style scoped>
-
-</style>
