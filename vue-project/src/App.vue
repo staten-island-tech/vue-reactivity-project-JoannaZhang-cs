@@ -12,10 +12,3 @@ const array = []
 </template>
 
 <style scoped></style>
-
-
-<template>
-  <div>
-
-  </div>
-</template>

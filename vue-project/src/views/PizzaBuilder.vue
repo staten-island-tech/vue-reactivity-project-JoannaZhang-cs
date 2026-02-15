@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <AnimalCard v-for="animal in animals" :key="animal.name" :animal="animal">{{
-      animal.name
-    }}</AnimalCard>
-    <!-- animal card makes a card for every animal -->
+    <PizzaBuilder v-for="topping in toppings" :key="topping.name" :topping="topping">{{
+      topping.name
+    }}</PizzaBuilder>
+    <!-- topping card makes a card for every topping -->
     <!-- left side is name/prop and right side is what you're passing in -->
 
     <!-- now u can see every animals name on the page -->
