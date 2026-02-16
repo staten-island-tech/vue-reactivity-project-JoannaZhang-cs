@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <PizzaBuilder v-for="topping in toppings" :key="topping.name" :topping="topping">{{
+    <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">{{
       topping.name
-    }}</PizzaBuilder>
+    }}</ToppingCard>
     <!-- topping card makes a card for every topping -->
     <!-- left side is name/prop and right side is what you're passing in -->
 
@@ -12,7 +12,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import PizzaBuilder from '@/components/PizzaBuilder.vue'
+import ToppingCard from '@/components/ToppingCard.vue'
 //don't need ref here because array isn't being updated
 const toppings = ref([
   { name: 'sauce', price: 20 },
