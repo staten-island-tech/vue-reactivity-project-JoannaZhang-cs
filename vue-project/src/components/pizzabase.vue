@@ -14,6 +14,7 @@ defineProps({
 
 <style scoped>
 .pizza {
+  /* need to import photo of pizza dough */
   height: 300px;
   width: 300px;
   border-radius: 50%;
