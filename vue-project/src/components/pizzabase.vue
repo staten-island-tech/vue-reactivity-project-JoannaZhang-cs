@@ -22,4 +22,7 @@ defineProps({
   margin: 40px auto;
   border: 8px solid #c68642;
 }
+
+.topping {
+}
 </style>

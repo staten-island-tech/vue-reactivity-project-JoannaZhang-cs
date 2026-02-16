@@ -31,6 +31,12 @@ const toppings = ref([
   { name: 'sausage', price: 50 },
   { name: 'salmon', price: 50 },
 ])
+
+const selectedToppings = ref({})
+
+function addTopping(topping) {
+  selectedToppings.value.push(topping)
+}
 </script>
 
 <style scoped>
