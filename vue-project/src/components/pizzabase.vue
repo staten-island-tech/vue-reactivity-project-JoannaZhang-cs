@@ -24,5 +24,11 @@ defineProps({
 }
 
 .topping {
+  position: absolute;
+  font-size: 12px;
+  background: red;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 50%;
 }
 </style>

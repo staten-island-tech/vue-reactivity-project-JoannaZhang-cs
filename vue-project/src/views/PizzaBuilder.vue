@@ -1,4 +1,6 @@
 <template>
+  <PizzaBase :selectedToppings="selectedToppings" />
+
   <div class="container">
     <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">{{
       topping.name
@@ -32,7 +34,7 @@ const toppings = ref([
   { name: 'salmon', price: 50 },
 ])
 
-const selectedToppings = ref({})
+const selectedToppings = ref([])
 
 function addTopping(topping) {
   selectedToppings.value.push(topping)
