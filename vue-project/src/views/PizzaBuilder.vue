@@ -5,14 +5,19 @@
     }}</ToppingCard>
     <!-- topping card makes a card for every topping -->
     <!-- left side is name/prop and right side is what you're passing in -->
-
-    <!-- now u can see every animals name on the page -->
   </div>
+
+  <!-- <div class="container">
+    <PizzaBase v-for="topping in toppings" :key="topping.name" :topping="topping">{{
+      topping.name
+    }}</PizzaBase>
+  </div> -->
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import ToppingCard from '@/components/ToppingCard.vue'
+import PizzaBase from '@/components/PizzaBase.vue'
 //don't need ref here because array isn't being updated
 const toppings = ref([
   { name: 'sauce', price: 20 },
