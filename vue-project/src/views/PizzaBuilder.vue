@@ -2,9 +2,13 @@
   <PizzaBase :selectedToppings="selectedToppings" />
 
   <div class="container">
-    <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">{{
-      topping.name
-    }}</ToppingCard>
+    <ToppingCard
+      v-for="topping in toppings"
+      :key="topping.name"
+      :topping="topping"
+      @add="addTopping(topping)"
+      >{{ topping.name }}</ToppingCard
+    >
     <!-- topping card makes a card for every topping -->
     <!-- left side is name/prop and right side is what you're passing in -->
   </div>
