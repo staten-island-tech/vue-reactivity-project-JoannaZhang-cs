@@ -6,18 +6,11 @@
       v-for="topping in toppings"
       :key="topping.name"
       :topping="topping"
-      @add="addTopping(topping)"
-      >{{ topping.name }}</ToppingCard
-    >
+      @add="addTopping"
+    />
     <!-- topping card makes a card for every topping -->
     <!-- left side is name/prop and right side is what you're passing in -->
   </div>
-
-  <!-- <div class="container">
-    <PizzaBase v-for="topping in toppings" :key="topping.name" :topping="topping">{{
-      topping.name
-    }}</PizzaBase>
-  </div> -->
 </template>
 
 <script setup>
@@ -41,7 +34,12 @@ const toppings = ref([
 const selectedToppings = ref([])
 
 function addTopping(topping) {
-  selectedToppings.value.push(topping)
+  console.log('Adding topping:', topping)
+  // if (!selectedToppings.value.includes(topping)) {
+  if (!selectedToppings.value.some((t) => t.name === topping.name)) {
+    selectedToppings.value.push(topping)
+    console.log('Updated selectedToppings:', selectedToppings.value) // Log updated selected toppings
+  }
 }
 </script>
 
@@ -62,7 +60,7 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
 }
-.card {
+/* .card {
   border: 1px solid #ccc;
   padding: 12px;
   margin-bottom: 12px;
@@ -72,5 +70,5 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
+} */
 </style>

@@ -2,7 +2,7 @@
   <div class="toppingcard">
     <img :src="getToppingImage(topping.name)" :alt="topping.name" class="topping-image" />
     <h1>{{ topping.name }}</h1>
-    <h2>Price: {{ topping.price }}</h2>
+    <h2>Price: ${{ topping.price }}</h2>
     <button @click="selectTopping">Add Topping</button>
   </div>
 </template>
@@ -18,6 +18,7 @@ defineProps({
 const emit = defineEmits(['add'])
 
 function selectTopping() {
+  console.log('button clicked, topping selected:', props.topping)
   emit('add', props.topping)
 }
 
