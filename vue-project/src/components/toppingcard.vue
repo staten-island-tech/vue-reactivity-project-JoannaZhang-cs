@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-z index : put most recent topic on top
-=======
+
+<!-- z index : put most recent topic on top -->
+
 <template>
   <div class="toppingcard">
     <img :src="getToppingImage(topping.name)" :alt="topping.name" class="topping-image" />
@@ -54,4 +54,3 @@ function getToppingImage(toppingName) {
   margin-bottom: 10px;
 }
 </style>
->>>>>>> c32628a49f16acdc918b38c8b6d1dd6ba6883c54

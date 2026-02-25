@@ -15,8 +15,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import ToppingCard from '@/components/ToppingCard.vue'
-import PizzaBase from '@/components/PizzaBase.vue'
+import ToppingCard from '@/components/toppingcard.vue'
+import PizzaBase from '@/components/pizzabase.vue'
 //don't need ref here because array isn't being updated
 const toppings = ref([
   { name: 'sauce', price: 20 },

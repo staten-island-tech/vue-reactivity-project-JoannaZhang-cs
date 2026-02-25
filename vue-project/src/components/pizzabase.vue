@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 accepts toppingts
 =======
 <template>
@@ -60,3 +61,5 @@ function getToppingImage(toppingName) {
 }
 </style>
 >>>>>>> c32628a49f16acdc918b38c8b6d1dd6ba6883c54
+=======
+>>>>>>> parent of 045e021 (.)
