@@ -2,7 +2,7 @@
 <!-- z index : put most recent topic on top -->
 
 <template>
-  <div class="toppingcard">
+  <div class="ToppingCard">
     <img :src="getToppingImage(topping.name)" :alt="topping.name" class="topping-image" />
     <h1>{{ topping.name }}</h1>
     <h2>Price: ${{ topping.price }}</h2>
@@ -47,10 +47,23 @@ function getToppingImage(toppingName) {
   width: 200px;
   border: 5px solid pink;
 }
+
 .topping-image {
   width: 100px;
   height: 100px;
   object-fit: contain;
   margin-bottom: 10px;
 }
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: hotpink;
+  color: white;
+  border: 5px solid pink;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
 </style>
