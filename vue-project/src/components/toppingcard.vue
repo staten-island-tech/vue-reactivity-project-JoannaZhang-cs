@@ -1,4 +1,3 @@
-
 <!-- z index : put most recent topic on top -->
 
 <template>
@@ -21,7 +20,7 @@ const props = defineProps({
 const emit = defineEmits(['add'])
 
 function selectTopping() {
-  console.log("button clicked, topping selected:", props.topping)
+  console.log('button clicked, topping selected:', props.topping)
   emit('add', props.topping)
 }
 
@@ -65,5 +64,4 @@ button {
   cursor: pointer;
   transition: background 0.2s;
 }
-
 </style>
