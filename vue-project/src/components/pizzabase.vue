@@ -1,9 +1,15 @@
 <template>
   <div class="pizza-base">
     <h1>Pizza Builder</h1>
+
     <div class="toppings">
       <div v-for="(topping, index) in selectedToppings" :key="index" class="topping-item">
-        <img :src="getToppingImage(topping.name)" :alt="topping.name" class="topping-image" />
+        <img
+          :src="getToppingImage(topping.name)"
+          :alt="topping.name"
+          class="topping-image"
+          :style="{ zIndex: index + 2 }"
+        />
       </div>
     </div>
   </div>
@@ -54,5 +60,49 @@ function getToppingImage(toppingName) {
   width: 30px;
   height: 30px;
   object-fit: contain;
+}
+
+.pizza-base {
+  z-index: 1;
+}
+
+.sauce {
+  z-index: 2;
+}
+
+.cheese {
+  z-index: 3;
+}
+
+.mushroom {
+  z-index: 4;
+}
+
+.jalapeno {
+  z-index: 5;
+}
+
+.onion {
+  z-index: 6;
+}
+
+.pepperoni {
+  z-index: 7;
+}
+
+.pineapple {
+  z-index: 8;
+}
+
+.redpepper {
+  z-index: 9;
+}
+
+.sausage {
+  z-index: 10;
+}
+
+.salmon {
+  z-index: 11;
 }
 </style>
