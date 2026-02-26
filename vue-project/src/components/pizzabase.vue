@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-accepts toppingts
-=======
 <template>
   <div class="pizza-base">
     <h1>Pizza Builder</h1>
@@ -60,6 +56,4 @@ function getToppingImage(toppingName) {
   object-fit: contain;
 }
 </style>
->>>>>>> c32628a49f16acdc918b38c8b6d1dd6ba6883c54
-=======
->>>>>>> parent of 045e021 (.)
+
