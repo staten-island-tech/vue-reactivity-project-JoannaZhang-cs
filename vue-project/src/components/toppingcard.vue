@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   topping: {
     type: Object,
     required: true,
@@ -21,7 +21,7 @@ defineProps({
 const emit = defineEmits(['add'])
 
 function selectTopping() {
-  console.log('button clicked, topping selected:', props.topping)
+  console.log("button clicked, topping selected:", props.topping)
   emit('add', props.topping)
 }
 

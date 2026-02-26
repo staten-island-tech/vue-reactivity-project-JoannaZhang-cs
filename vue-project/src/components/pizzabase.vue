@@ -56,4 +56,3 @@ function getToppingImage(toppingName) {
   object-fit: contain;
 }
 </style>
-
