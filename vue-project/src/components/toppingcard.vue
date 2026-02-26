@@ -37,7 +37,7 @@ function getToppingImage(toppingName) {
 </script>
 
 <style scoped>
-.toppingcard {
+.ToppingCard {
   display: flex;
   flex-direction: column;
   align-items: center;
