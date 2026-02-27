@@ -5,20 +5,27 @@
     <ToppingCard
       v-for="topping in toppings"
       :key="topping.name"
-      :topping="topping"
-      @add="addTopping"
-    />
-    <!-- topping card makes a card for every topping -->
+      :topping="topping">{{topping.name}}
+      <button @click="addToPizza">Add Topping</button>
+    </ToppingCard>
+      <!-- topping card makes a card for every topping -->
     <!-- left side is name/prop and right side is what you're passing in -->
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import ToppingCard from '@/components/ToppingCard.vue'
-import PizzaBase from '@/components/PizzaBase.vue'
+function addToPizza(topping) {
+  if (!selectedToppings.value.includes(topping)) {
+  if (!selectedToppings.value.some((t) => t.name === topping.name)) {
+    selectedToppings.value.push(topping)
+  }
+}
+}
+import ToppingCard from '@/components/toppingcard.vue'
+import PizzaBase from '@/components/pizzabase.vue'
 //don't need ref here because array isn't being updated
-const toppings = ref([
+const toppings = [
   { name: 'sauce', price: 20 },
   { name: 'cheese', price: 30 },
   { name: 'mushroom', price: 40 },
@@ -29,18 +36,13 @@ const toppings = ref([
   { name: 'redpepper', price: 40 },
   { name: 'sausage', price: 50 },
   { name: 'salmon', price: 50 },
+]
+
+const selectedToppings = ref([
+
 ])
 
-const selectedToppings = ref([])
 
-function addTopping(topping) {
-  console.log('Adding topping:', topping)
-  // if (!selectedToppings.value.includes(topping)) {
-  if (!selectedToppings.value.some((t) => t.name === topping.name)) {
-    selectedToppings.value.push(topping)
-    console.log('Updated selectedToppings:', selectedToppings.value) // Log updated selected toppings
-  }
-}
 </script>
 
 <style scoped>

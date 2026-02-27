@@ -5,7 +5,7 @@
     <img :src="getToppingImage(topping.name)" :alt="topping.name" class="topping-image" />
     <h1>{{ topping.name }}</h1>
     <h2>Price: ${{ topping.price }}</h2>
-    <button @click="selectTopping">Add Topping</button>
+    <button @click="addToPizza">Add Topping</button>
   </div>
 </template>
 
@@ -19,8 +19,7 @@ const props = defineProps({
 
 const emit = defineEmits(['add'])
 
-function selectTopping() {
-  console.log('button clicked, topping selected:', props.topping)
+function selectedToppings() {
   emit('add', props.topping)
 }
 
