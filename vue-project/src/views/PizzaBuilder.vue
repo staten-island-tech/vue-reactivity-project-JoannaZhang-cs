@@ -5,7 +5,7 @@
     <ToppingCard
       v-for="topping in toppings"
       :key="topping.name"
-      :topping="topping">{{topping.name}}
+      :topping="topping">
       <button @click="addToPizza(topping)">Add Topping</button>
     </ToppingCard>
       <!-- topping card makes a card for every topping -->
@@ -23,7 +23,6 @@ function addToPizza(topping) {
   //function: if topping doesnt alr exist in selected toppings then push the topping to pizza - does this even work (how do i test selectedtoppings)
 } */
 selectedToppings.value.push(topping)
-console.log(topping)
 }
 import ToppingCard from '@/components/toppingcard.vue'
 import PizzaBase from '@/components/pizzabase.vue'

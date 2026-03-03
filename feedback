@@ -1,0 +1,45 @@
+# Vue Reactivity Project Feedback
+**Student:** Joanna Zhang
+
+This is a pizza topping builder — the core reactive functionality works well with a proper `ref`, `v-for`, and `@click` handler, though there are some incomplete pieces and no BEM CSS.
+
+## Vite CLI – Mastery
+`package.json` correctly includes `vite` and `vue` with proper scripts set up.
+
+## Iteration in Vue – Mastery
+`v-for` is used with `:key` bound to a unique value on the topping elements. Correct pattern.
+
+## Data Binding – Mastery
+`selectedToppings` is declared as `ref([])` and bound in the template. Data is displayed correctly with `{{ }}`. `v-model` is used for input fields.
+
+## Click Methods – Mastery
+`addToPizza()` is defined and connected with `@click="addToPizza(topping)"`. The function correctly uses `.value` to push to the ref array. This is working correctly.
+
+## Reactive UI – Mastery
+Adding a topping updates the selected toppings list immediately in the template. The reactive system is working as intended.
+
+## Semantic HTML – Approaching
+The topping list uses a good structure. Consider wrapping the displayed selected toppings in a `<ul>/<li>` structure if they are currently in plain `<div>` elements:
+
+```html
+<ul>
+  <li v-for="topping in selectedToppings" :key="topping.name">
+    {{ topping.name }}
+  </li>
+</ul>
+```
+
+## BEM CSS – Not Yet
+No BEM class names are used. Class names like `card`, `list`, `button` are generic. Apply BEM naming convention:
+- `pizza-builder` (block)
+- `pizza-builder__topping` (element)
+- `pizza-builder__topping--selected` (modifier)
+
+## Bonus – Aesthetics – Approaching
+The layout is clean and functional. The `totalprice.vue` component appears to be empty — completing it and adding a running total display would add a lot to the user experience.
+
+## Summary of Critical Fixes
+- **Complete `totalprice.vue`** — it's an empty file. Add logic to calculate and display the total price of selected toppings.
+- **Add BEM class names** to your CSS following `block__element--modifier` convention.
+- **Wrap selected toppings in `<ul>/<li>`** if they are currently in `<div>` elements.
+- Fix any import ordering issues — in JavaScript/ES modules, imports should be at the top of the file.

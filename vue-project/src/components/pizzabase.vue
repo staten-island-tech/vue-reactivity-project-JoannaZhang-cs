@@ -1,6 +1,7 @@
 <template>
-  <div class="pizza-base">
     <h1>Pizza Builder</h1>
+  <div class="pizza-base">
+  
 
     <div class="toppings">
       <div v-for="(topping, index) in selectedToppings" :key="index" class="topping-item">
