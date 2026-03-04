@@ -44,7 +44,6 @@ function getToppingImage(toppingName) {
 .topping-item {
   position: absolute;
   font-size: 12px;
-  background: red;
   color: white;
   padding: 4px 6px;
   border-radius: 50%;
@@ -58,9 +57,9 @@ function getToppingImage(toppingName) {
 }
 
 .topping-image {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
 }
 
 .pizza-base {
