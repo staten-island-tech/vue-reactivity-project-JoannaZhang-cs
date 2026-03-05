@@ -8,8 +8,27 @@
 </template>
 
 <script setup>
+defineProps({
+  prices: {
+    type: Array,
+    required: true,
+  },
+})
+
+function addToCart(price) {
+
+}
+
+const totalPrice= 
+function totalPrice(){
+  count.value++ 
+}
+function reset() {
+count.value = 0
+}
 
 </script>
+
 
 <style scoped>
 
