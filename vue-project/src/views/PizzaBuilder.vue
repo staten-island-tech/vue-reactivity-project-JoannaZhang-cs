@@ -2,19 +2,16 @@
   <PizzaBase :selectedToppings="selectedToppings" />
 
   <div class="container">
-    <ToppingCard
-      v-for="topping in toppings"
-      :key="topping.name"
-      :topping="topping">
+    <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">
       <button @click="addToPizza(topping)">Add Topping</button>
     </ToppingCard>
-      <!-- topping card makes a card for every topping -->
+    <!-- topping card makes a card for every topping -->
     <!-- left side is name/prop and right side is what you're passing in -->
   </div>
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 function addToPizza(topping) {
   /* if (!selectedToppings.value.includes(topping)) {
   if (!selectedToppings.value.some((t) => t.name === topping.name)) {
@@ -22,7 +19,7 @@ function addToPizza(topping) {
   }
   //function: if topping doesnt alr exist in selected toppings then push the topping to pizza - does this even work (how do i test selectedtoppings)
 } */
-selectedToppings.value.push(topping)
+  selectedToppings.value.push(topping)
 }
 import ToppingCard from '@/components/toppingcard.vue'
 import PizzaBase from '@/components/pizzabase.vue'
@@ -38,11 +35,14 @@ const toppings = [
   { name: 'redpepper', price: 40 },
   { name: 'sausage', price: 50 },
   { name: 'salmon', price: 50 },
+  { name: 'broccoli', price: 30 },
+  { name: 'crabmeat', price: 40 },
+  { name: 'chicken', price: 50 },
+  { name: 'ramen', price: 40 },
+  { name: 'porkfloss', price: 40 },
 ]
 
 const selectedToppings = ref([])
-
-
 </script>
 
 <style scoped>

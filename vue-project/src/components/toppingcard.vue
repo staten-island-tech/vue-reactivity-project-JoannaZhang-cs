@@ -17,7 +17,6 @@ const props = defineProps({
   },
 })
 
-
 function getToppingImage(toppingName) {
   return `/toppings/${toppingName}.png`
   // return new URL(`../assets/${toppingName}.png`, import.meta.url).href
