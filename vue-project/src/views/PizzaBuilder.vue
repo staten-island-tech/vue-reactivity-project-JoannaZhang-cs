@@ -1,12 +1,14 @@
 <template>
   <PizzaBase :selectedToppings="selectedToppings" />
-
-  <div class="container">
-    <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">
-      <button @click="addToPizza(topping)">Add Topping</button>
-    </ToppingCard>
-    <!-- topping card makes a card for every topping -->
-    <!-- left side is name/prop and right side is what you're passing in -->
+  <div class="page">
+    <div class="container">
+      <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">
+        <button @click="addToPizza(topping)">Add Topping</button>
+      </ToppingCard>
+      <!-- topping card makes a card for every topping -->
+      <!-- left side is name/prop and right side is what you're passing in -->
+    </div>
+    <TotalPrice :toppings="selectedToppings" />
   </div>
 </template>
 
@@ -23,6 +25,7 @@ function addToPizza(topping) {
 }
 import ToppingCard from '@/components/toppingcard.vue'
 import PizzaBase from '@/components/pizzabase.vue'
+import TotalPrice from '@/components/totalprice.vue'
 //don't need ref here because array isn't being updated
 const toppings = [
   { name: 'sauce', price: 20 },
