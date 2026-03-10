@@ -1,35 +1,28 @@
 <template>
-    <div class="container">
-        <TotalPrice v-for="price in toppings" :key = "topping.price" :price="price">{{ topping.price }}
-          <button @click="addToCart(price)">Add to Cart</button>
-        </TotalPrice>
+  <div class="cart">
+    <div v-for="(topping, index) in toppings" :key="index" class="cart-item">
+      {{ topping.name }} - ${{ topping.price }}
     </div>
-
+    <h3>Total: ${{ total }}</h3>
+  </div>
 </template>
 
 <script setup>
-defineProps({
-  prices: {
-    type: Array,
+const props = defineProps({
+  toppings: Array,
     required: true,
-  },
 })
 
-function addToCart(price) {
-
+const total
 }
 
-const totalPrice= 
+const totalPrice=
 function totalPrice(){
-  count.value++ 
+  count.value++
 }
 function reset() {
 count.value = 0
 }
-
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
