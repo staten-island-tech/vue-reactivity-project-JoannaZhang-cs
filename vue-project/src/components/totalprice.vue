@@ -9,11 +9,20 @@
 </template>
 
 <script setup>
+<<<<<<< Updated upstream
 import { ref, computed } from 'vue'
 
 const props = defineProps({
   toppings: Array,
   required: true,
+=======
+
+defineProps({
+  prices: {
+    type: Array,
+    required: true,
+  },
+>>>>>>> Stashed changes
 })
 
 const total = computed(() => {
